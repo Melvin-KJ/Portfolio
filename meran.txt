@@ -1,0 +1,128 @@
+             --------------------------------
+                CSS - Cascading Style Sheets
+             --------------------------------
+
+        - used to style html elements
+        1. Applying CSS
+        - inline css
+            used to style attributes
+            syntax : style="css-property: value";
+        - internal css
+            used to style tag
+            syntax : <style> </style>
+        - external css
+            used to style single or multiple html entire document
+            syntax: inside style.css file
+                    p{
+                        font-size: 12px;  
+                    }
+        2. CSS Selectors
+        - selectors : used to select html elements to a css file
+            - use tag name selectors
+            - class selectors
+            - id selectors
+            - universal selectors
+        
+        3. CSS Combinators
+            - grouping selectors ( use comma to seperate each html elements)
+            - descendant selectors / child selectors (use space)
+                - used to provide style to child elements inside parent elements
+            - child selector : using >
+                it will select all elements after the parent tag
+            - sibling selector : using ~
+                it will select elements after that tag.
+            - immediate sibling selector : using +
+                it will select next immediate sibling selector 
+
+        4. display 
+        - block element : take entire width
+            - margin,padding affects all side like bottom,left
+        - inline element : take the width required
+            - margin doesn't affects on left and right side
+
+        5. Box Model
+        - padding : affects the content
+        - margin : outside the content
+
+        6. CSS Property 
+            - Float property : The float property specifies whether an element should float to the left, right, or not at all.
+
+            Note: Absolutely positioned elements ignore the float property!
+
+        7.      Position property : The position property specifies the type of positioning method used for an element. In position property there is position spacing in box model.
+
+                -Static position :HTML elements are positioned static by default.
+                Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+                -Fixed position : In element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+                
+                -Relative position: An element with position: relative; is positioned relative to its normal position.
+
+                Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.
+
+                - Absolute position: use to see the content overlapped. It will appear on top left part of the browser. 
+                Note: Remember to use top: 0px; and parent element should have position: relative;
+
+                generally browser il element one above other ann verune.
+
+                If I have to change the overlapping order, then if i want to see the first col div. set it with an id of d1 and set it with css like this 
+                #d1{
+                    z-index: 1; // this will have the highest z-index value since rest have z-index value 0.
+                }
+
+                -Sticky position: used to stick an element and make sure to mention 0px.
+
+        8. Flexbox property: used to display elements in row and column
+            - Flex container tag is needed to arrange all elements inside conatiner as row or column. We have to set container display as flex.
+                - justify-content
+                - align-items
+                - flex-direction
+            - elements inside container are called Flex items
+
+        -Pseudo Classes
+            A pseudo class is used to define a special state of an element.
+            - syntax : selector:pseudo-class {
+                        property: value;
+                        }
+        
+        - Flexbox cannot control the column width. So we have to use CSS Grid
+
+        - CSS Grid : used to arrange rows and columns.
+            - Grid container tag is neeeded to arrange elements inside container itself similar to flex.
+                - grid-template-column / row : used to set width of column / row.
+                - gap : used to set space between rows and columns.
+                - column / row gap
+            - Grid items : elements inside container are grid items.
+            - Grid lines :joining lines between columns and rows
+                grid-column-start:1; 
+                grid-column-end:3;
+
+            - fr unit in grid
+            - repeat(number of columns/rows , the column width we want to set)
+
+            -linear-gradientL is used to set combinations of colors as background
+                -syntax: background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+            
+            - Animation in CSS: animation property , to define animation in css use @keyframes
+                - Animation libraries
+                    -animate: https://animate.style/
+                    - AOS animation: https://michalsnik.github.io/aos/
+                    - javascript locomotive scroll : https://locomotivemtl.github.io/locomotive-scroll/
+            
+            - website hosting: web Server
+                -netlify
+                -github pages
+                -vercel
+            
+            -------------------------------------------------------------
+                            GIT & GITHUB
+            -------------------------------------------------------------
+
+            - GIT : version controlling system / used to control version of code
+            TO KEEP TRACK OF THE CHANGES IN THE CODE
+            - GIT commands
+                - git status: used to check the status of git inside the folder
+                - git init: used to create / initialize git repository in a folder
+                - git add . : used to track all the untracked files in the folder to git repository
+                - git commit -m "message" : used to save tracked files to the git repository
+
