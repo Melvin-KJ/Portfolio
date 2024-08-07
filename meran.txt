@@ -130,4 +130,6 @@
                 git config --global user.email "you@example.com"
                 git config --global user.name "Your Name"
 
-                
+                git remote add origin https://github.com/Melvin-KJ/Portfolio.git
+                - it is telling which is the remote folder in the github
+                git push -u origin main
